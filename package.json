@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "release-it": "^12.3.4",
+    "@release-it/conventional-changelog": "^1.1.0"
+  },
+  "name": "root",
+  "version": "0.0.0",
+  "scripts": {
+    "release": "release-it"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release %s",
+      "tagName": "v%s"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  }
+}
